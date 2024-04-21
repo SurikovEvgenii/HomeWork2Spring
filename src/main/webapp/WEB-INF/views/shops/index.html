@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shops</title>
+</head>
+<body>
+
+    <div th:each="shop:${shops}">
+        <a th:href="@{/shops/{id}(id=${shop.getId()})}" th:text="${shop.getName()}"></a>
+    </div><br>
+
+    <a type="button" href="/shops/new">Add new shop</a>
+</body>
+</html>
